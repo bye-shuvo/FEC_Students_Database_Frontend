@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Form from "./Form";
 import Result from "./Result";
-import Toast from "./Toast";
+import Toast from "./assets/Toast";
 
 function App() {
   const [isFormModalClose, setIsFormModalClose] = useState(true);

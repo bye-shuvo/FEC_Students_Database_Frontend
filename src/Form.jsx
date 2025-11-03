@@ -609,7 +609,7 @@ const Form = ({setIsFormModalClose , setIsSubmitted}) => {
       <div className="h-full md:h-[95%] w-full md:w-[55%] bg-white rounded-lg fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 shadow-2xl flex flex-col overflow-hidden z-50">
       <img
         className="-z-10 absolute left-1/2 top-2/3 -translate-1/2 w-xl aspect-auto opacity-15"
-        src="./src/assets/form-body.svg"
+        src="./public/form-body.svg"
         alt="fec-student-form"
       />
 
@@ -617,7 +617,7 @@ const Form = ({setIsFormModalClose , setIsSubmitted}) => {
       <div className="relative bg-linear-to-r from-indigo-600 to-indigo-800 text-white px-5 md:px-12 py-6 shrink-0">
         <img
           className="absolute right-4 top-2 w-35 md:w-45 aspect-auto"
-          src="./src/assets/form_header_photo.svg"
+          src="./public/form_header_photo.svg"
           alt="FEC STUDENTS FORM"
         />
         <h2 className="md:text-2xl font-bold">Student Registration Form</h2>

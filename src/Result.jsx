@@ -50,8 +50,8 @@ const Result = ({ setIsResultModalClose, students = [] }) => {
           className="z-10 absolute left-1/2 top-2/3 -translate-1/2 w-md aspect-auto opacity-50 pointer-events-none"
           src={
             displayStudents.length === 0
-              ? "./src/assets/no-result-found.svg"
-              : "./src/assets/searched-result-found.svg"
+              ? "./public/no-result-found.svg"
+              : "./public/searched-result-found.svg"
           }
           alt="search-modal-bg"
         />
@@ -60,7 +60,7 @@ const Result = ({ setIsResultModalClose, students = [] }) => {
         <div className="relative bg-linear-to-r from-indigo-600 to-indigo-800 text-white px-5 md:px-10 py-5 z-30">
           <img
             className="absolute right-12 -top-2 w-25 md:w-35 aspect-auto opacity-80"
-            src="./src/assets/data-searching.png"
+            src="./public/data-searching.png"
             alt="search-info"
           />
           <div className="flex items-center justify-between">
