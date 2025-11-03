@@ -617,7 +617,7 @@ const Form = ({setIsFormModalClose , setIsSubmitted}) => {
       <div className="relative bg-linear-to-r from-indigo-600 to-indigo-800 text-white px-5 md:px-12 py-6 shrink-0">
         <img
           className="absolute right-4 top-2 w-35 md:w-45 aspect-auto"
-          src="./public/form_header_photo.svg"
+          src="/form_header_photo.svg"
           alt="FEC STUDENTS FORM"
         />
         <h2 className="md:text-2xl font-bold">Student Registration Form</h2>
