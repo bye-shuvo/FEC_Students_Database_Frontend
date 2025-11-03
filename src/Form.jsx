@@ -609,7 +609,7 @@ const Form = ({setIsFormModalClose , setIsSubmitted}) => {
       <div className="h-full md:h-[95%] w-full md:w-[55%] bg-white rounded-lg fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 shadow-2xl flex flex-col overflow-hidden z-50">
       <img
         className="-z-10 absolute left-1/2 top-2/3 -translate-1/2 w-xl aspect-auto opacity-15"
-        src="./public/form-body.svg"
+        src="./form-body.svg"
         alt="fec-student-form"
       />
 
