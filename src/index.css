@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+*{
+  font-family: "Figtree", sans-serif;
+}
+
+    @layer base {
+      input[type="number"] {
+        -moz-appearance: textfield; /* For Firefox */
+      }
+
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none; /* For WebKit browsers */
+        margin: 0; /* Remove any potential margin */
+      }
+    }
