@@ -33,7 +33,7 @@ function App() {
     const query = queryParams.toString();
 
     const response = await fetch(
-      `http://localhost:3000/students/search?${query}`
+      `https://fecsdb-backend.vercel.app/students/search?${query}`
     );
     const data = await response.json();
     setResult(data);

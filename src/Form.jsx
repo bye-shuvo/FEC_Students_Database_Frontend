@@ -129,7 +129,7 @@ const Form = ({setIsFormModalClose , setIsSubmitted}) => {
   }
 
   const handleFromSubmit = async () => {
-    const response = await fetch("http://localhost:3000/students/create" , {
+    const response = await fetch("https://fecsdb-backend.vercel.app/students/create" , {
       method : "POST",
       body : JSON.stringify(formData) ,
       headers : {
