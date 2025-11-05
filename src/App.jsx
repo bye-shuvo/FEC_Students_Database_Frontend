@@ -8,6 +8,7 @@ function App() {
   const [isResultModalClose, setIsResultModalClose] = useState(true);
   const [isSearchBtnActive, setIsSearchBtnActive] = useState(true);
   const [isSubmitted , setIsSubmitted] = useState(false);
+  const [isSearching , setIsSearching] = useState(false);
   const [params, setParams] = useState({});
   const [result, setResult] = useState(null);
 
@@ -17,6 +18,7 @@ function App() {
   };
 
   const handleSearch = async () => {
+    setIsSearching(true);
     const queryParams = new URLSearchParams();
     if (
       params.registration_number &&
@@ -38,11 +40,13 @@ function App() {
     const data = await response.json();
     setResult(data);
     setIsResultModalClose(false);
+    setIsSearching(false);
   };
 
   return (
     <>
       <div className={`flex items-center flex-col p-1 md:p-0`}>
+        <div id="developer-section" className="absolute top-2 left-2 text-sm">Developed By - <span className="text-lg bg-linear-to-l bg-clip-text text-transparent from-indigo-600 via-pink-500 to-orange-500 font-extrabold">bye_shuvo</span></div>
         {isSubmitted && (
           <Toast
             type={"confirmation"}
@@ -282,7 +286,7 @@ function App() {
                     className="cursor-pointer w-full px-6 py-3 md:py-4 bg-linear-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 text-base md:text-lg transform hover:scale-[1.02] active:scale-[0.98]"
                   >
                     <svg
-                      className="w-5 h-5"
+                      className={`w-5 h-5 ${isSearching && "animate-ping"}`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -294,7 +298,12 @@ function App() {
                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                       />
                     </svg>
-                    Search Students
+                    {
+                      isSearching ? "Searching" : "Search Students"
+                    }
+                    {
+                      isSearching && <svg className="h-6 w-6 animate-ping" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path className="fill-white" d="M96 320C96 289.1 121.1 264 152 264C182.9 264 208 289.1 208 320C208 350.9 182.9 376 152 376C121.1 376 96 350.9 96 320zM264 320C264 289.1 289.1 264 320 264C350.9 264 376 289.1 376 320C376 350.9 350.9 376 320 376C289.1 376 264 350.9 264 320zM488 264C518.9 264 544 289.1 544 320C544 350.9 518.9 376 488 376C457.1 376 432 350.9 432 320C432 289.1 457.1 264 488 264z"/></svg>
+                    }
                   </button>
 
                   {/* Quick Info */}
