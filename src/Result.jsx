@@ -22,6 +22,11 @@ const Result = ({ setIsResultModalClose, students = [] }) => {
     });
   };
 
+  //Helper function to format name
+  const formatName = (name) =>{
+    return name.split(" ").map(substr => substr.charAt(0).toUpperCase().concat(substr.substring(1).toLowerCase())).join(" ");
+  }
+  
   // Helper function to get department name
   const getDepartmentName = (deptId) => {
     const departments = {
@@ -47,7 +52,7 @@ const Result = ({ setIsResultModalClose, students = [] }) => {
       <div className="h-full md:h-[95%] w-full md:w-[55%] bg-white rounded-lg fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 shadow-2xl flex flex-col overflow-hidden z-20">
         {/* Background ovelay */}
         <img
-          className="z-10 absolute left-1/2 top-2/3 -translate-1/2 w-md aspect-auto opacity-50 pointer-events-none"
+          className="z-10 absolute left-1/2 top-2/3 -translate-1/2 w-md aspect-auto opacity-40 pointer-events-none"
           src={
             displayStudents.length === 0
               ? "/no-result-found.svg"
@@ -117,7 +122,7 @@ const Result = ({ setIsResultModalClose, students = [] }) => {
                       </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="text-base font-semibold text-gray-900 max-w-[80%] truncate">
-                          {student.full_name}
+                          {formatName(student.full_name)}
                         </h3>
                         <p className="text-sm text-gray-500 mt-0.5">
                           {student.registration_number || "N/A"} • Batch{" "}
