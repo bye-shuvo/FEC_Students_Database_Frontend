@@ -121,7 +121,7 @@ const Result = ({ setIsResultModalClose, students = [] }) => {
                         </span>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="text-base font-semibold text-gray-900 max-w-[80%] truncate">
+                        <h3 className="text-base font-semibold text-gray-900 max-w-[60%] truncate">
                           {formatName(student.full_name)}
                         </h3>
                         <p className="text-sm text-gray-500 mt-0.5">
@@ -291,7 +291,7 @@ const Result = ({ setIsResultModalClose, students = [] }) => {
                               <div>
                                 <span className="text-gray-500">Mobile:</span>
                                 <p className="text-gray-900 font-medium">
-                                  {student.mobile_phone || "N/A"}
+                                  {"01*********" || "N/A"}
                                 </p>
                               </div>
                               <div>
