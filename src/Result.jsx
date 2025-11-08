@@ -24,7 +24,7 @@ const Result = ({ setIsResultModalClose, students = [] }) => {
 
   //Helper function to format name
   const formatName = (name) =>{
-    return name.split(" ").map(substr => substr.charAt(0).toUpperCase().concat(substr.substring(1).toLowerCase())).join(" ").substring(1 , 15);
+    return name.split(" ").map(substr => substr.charAt(0).toUpperCase().concat(substr.substring(1).toLowerCase())).join(" ").substring(0 , 15);
   }
   
   // Helper function to get department name
