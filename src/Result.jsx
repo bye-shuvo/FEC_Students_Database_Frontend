@@ -24,7 +24,7 @@ const Result = ({ setIsResultModalClose, students = [] }) => {
 
   //Helper function to format name
   const formatName = (name) =>{
-    return name.split(" ").map(substr => substr.charAt(0).toUpperCase().concat(substr.substring(1).toLowerCase())).join(" ");
+    return name.split(" ").map(substr => substr.charAt(0).toUpperCase().concat(substr.substring(1).toLowerCase())).join(" ").substring(1 , 15);
   }
   
   // Helper function to get department name
@@ -121,8 +121,8 @@ const Result = ({ setIsResultModalClose, students = [] }) => {
                         </span>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="text-base font-semibold text-gray-900 max-w-[60%] truncate">
-                          {formatName(student.full_name)}
+                        <h3 className="text-base font-semibold text-gray-900 truncate">
+                          {formatName(student.full_name)}...
                         </h3>
                         <p className="text-sm text-gray-500 mt-0.5">
                           {student.registration_number || "N/A"} • Batch{" "}
