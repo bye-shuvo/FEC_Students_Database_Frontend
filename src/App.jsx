@@ -46,7 +46,7 @@ function App() {
   return (
     <>
       <div className={`flex items-center flex-col p-1 md:p-0`}>
-        <div id="developer-section" className="absolute md:top-2 md:left-2 top-px left-px md:text-sm text-[10px]">Developed By - <span className="text-sm md:text-lg bg-linear-to-l bg-clip-text text-transparent from-indigo-600 via-pink-500 to-orange-500 font-extrabold">bye_shuvo</span></div>
+        {/* <div id="developer-section" className="absolute md:top-2 md:left-2 top-px left-px md:text-sm text-[10px]">Developed By - <span className="text-sm md:text-lg bg-linear-to-l bg-clip-text text-transparent from-indigo-600 via-pink-500 to-orange-500 font-extrabold">bye_shuvo</span></div> */}
         {isSubmitted && (
           <Toast
             type={"confirmation"}
